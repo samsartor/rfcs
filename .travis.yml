@@ -4,7 +4,7 @@ before_install:
   - chmod u=rw,og= ~/.ssh/rfcs-publish-key
   - echo "Host github.com" >> ~/.ssh/config
   - echo "  IdentityFile ~/.ssh/rfcs-publish-key" >> ~/.ssh/config
-  - git --version
+  - git --version 
 script:
   - rev=$(git rev-parse --short HEAD)
   - (cargo install mdbook --git https://github.com/azerupi/mdBook.git --force || true)
